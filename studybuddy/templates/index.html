@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StudyBuddy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="shell">
+    <header class="top">
+      <div class="lamp" aria-hidden="true"></div>
+      <div>
+        <h1>Sage</h1>
+        <p>Your study buddy. No crowds, no pressure.</p>
+      </div>
+    </header>
+
+    <section id="chat" class="chat" aria-live="polite">
+      <div class="msg buddy">Hi, I'm Sage. Tell me what you want to study today, and we'll do it together.</div>
+    </section>
+
+    <div class="chips">
+      <button class="chip" data-text="Let's start a study session">Start a session</button>
+      <button class="chip" data-text="Quiz me">Quiz me</button>
+      <button class="chip" data-text="I'm stuck and tired">I'm stuck</button>
+    </div>
+
+    <div class="composer">
+      <input id="input" type="text" placeholder="Type here..." autocomplete="off" aria-label="Message Sage">
+      <button id="send">Send</button>
+    </div>
+  </main>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
